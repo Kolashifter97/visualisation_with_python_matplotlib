@@ -28,8 +28,8 @@ fig.suptitle('Jahresübersicht der Erstellten & Geschlossenen Helpdesk-Tickets')
 
 def animate(i):
 
-    linie1.set_data(month[:i], opend[:i])
-    linie2.set_data(month[:i], closed[:i])
+    linie1.set_data(month[:i +1], opend[:i +1])
+    linie2.set_data(month[:i +1], closed[:i +1])
     return linie1, linie2
 
 ani = animation.FuncAnimation(fig, animate, frames=len(month), interval=1000, blit=True)
